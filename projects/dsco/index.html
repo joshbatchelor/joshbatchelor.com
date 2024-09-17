@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://unpkg.com/konva@7.0.2/konva.min.js"></script>
+    <meta charset="utf-8" />
+    <title>Builder Demo</title>
+    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6305036/7038412/css/fonts.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="builder.css" />
+</head>
+<body>
+    <header>
+        <img src="images/placeholder-menu.png" style="width: 1745px;">
+    </header>
+    <main>
+        <h1>Omnichannel solution builder</h1>
+        <div class="builder-wrapper">
+            <div class="menu">
+                <section id="menu1">
+                    <p>Use our omnichannel solution builder to craft your own supply chain 
+                    solution and see how you can use Dsco to connect any demand channel 
+                    to any inventory source.</p>
+                    <h5>Choose a color for your icons</h5>
+                    <a href="#" class="color-select img-hover" data-color="blue"><img src="images/1x/blue.png" data-orig="images/1x/blue.png" data-hover="images/1x/blue-over.png" /></a>
+                    <a href="#" class="color-select img-hover" data-color="green"><img src="images/1x/green.png" data-orig="images/1x/green.png" data-hover="images/1x/green-over.png" /></a>
+                    <a href="#" class="color-select img-hover" data-color="orange"><img src="images/1x/orange.png" data-orig="images/1x/orange.png" data-hover="images/1x/orange-over.png" /></a>
+                    <a href="#" class="color-select img-hover" data-color="purple"><img src="images/1x/purple.png" data-orig="images/1x/purple.png" data-hover="images/1x/purple-over.png" /></a>
+                    <a href="#" class="color-select img-hover" data-color="yellow"><img src="images/1x/yellow.png" data-orig="images/1x/yellow.png" data-hover="images/1x/yellow-over.png" /></a>
+                </section>
+                <div id="menu2" class="menu-style">
+                    <p>What type of solution would you like to build?</p>
+                </div>
+                <div id="menu3" class="menu-style"></div>
+                <div id="menu4" class="menu-style"></div>
+                <div id="customMenu2" class="menu-style builder-menu"></div>
+                <div id="customMenu3" class="menu-style builder-menu"></div>
+                <div id="customMenu4" class="menu-style builder-menu"></div>
+                <div id="customMenu5" class="menu-style builder-menu"></div>
+            </div>
+            <div class="builder-content">
+                <div id="builder-tabs">
+                    <a href="#" data-choice="your_ecosystem" class="selected your_ecosystem"><i class="store"></i> Your Ecosystem</a>
+                    <a href="#" data-choice="your_connections" class="your_connections"><i class="antenna"></i> Your Connections</a>
+                    <a href="#" data-choice="dsco" class="dsco">Your <i class="dsco"><img src="images/1x/icon-logo.png"></i> SOLUTION</a>
+                </div>
+                <div id="builder-container"></div>
+                <div id="builder-frm"></div>
+            </div>
+            
+        </div>
+    </main>
+    
+<script src="builder.js"></script>
+</body>
+</html>

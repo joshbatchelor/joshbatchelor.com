@@ -1,0 +1,394 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+header {
+    margin-bottom: 50px;
+    width: 100%;
+}
+main {
+    margin-left: 135px;
+    margin-bottom: 200px;
+    width: 100%;
+}
+.start-over {
+    color: #E8722E;
+    font-family: "Idlewild SSm A", "Idlewild SSm B";
+    font-size: 12px;
+    cursor: pointer;
+}
+#builder-tabs {
+    padding-left: 15px;
+    display: flex;
+    border-bottom: 1px solid #ededed;
+}
+#builder-tabs a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 3px solid #fff;
+    background-color: #f5f5f5;
+    font-family: "Idlewild SSm A", "Idlewild SSm B";
+    font-size: 11px;
+    letter-spacing: 0px;
+    color: #707070;
+    padding: 10px 20px 10px 10px;
+    margin-right: 5px;
+    text-decoration: none;
+    border-bottom: 1px solid #ededed;
+    border-left: 1px solid #f5f5f5;
+    border-right: 1px solid #f5f5f5;
+    margin-bottom: -1px;
+    transition: 0.3s;
+}
+#builder-tabs a.selected,
+#builder-tabs a:hover {
+    border-left: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    border-bottom: 1px solid #fff;
+    margin-bottom: -1px;
+    background: #fff;
+    
+}
+#builder-tabs a.your_ecosystem.selected,
+#builder-tabs a.your_ecosystem:hover {
+    border-top-color: #e7722e;
+}
+#builder-tabs a.your_connections.selected,
+#builder-tabs a.your_connections:hover {
+    border-top-color: #2e3f51;
+}
+#builder-tabs a.dsco.selected,
+#builder-tabs a.dsco:hover {
+    border-top-color: #b83727;
+}
+#builder-tabs a i {
+    height: 35px;
+    width: 35px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+    border: 1px solid #f5f5f5;
+}
+#builder-tabs a.your_ecosystem i.store {
+    background: url(images/1x/partner_store.png) no-repeat center center #e7722e; 
+    background-size: 25px;
+}
+#builder-tabs a.your_connections i.antenna {
+    background: url(images/1x/icon-antenna.png) no-repeat center bottom #fff;
+    background-size: 21px;
+}
+#builder-tabs a.your_connections.selected i.antenna {
+    background: url(images/1x/icon-antenna-selected.png) no-repeat center bottom #fff;
+    background-size: 21px;
+    border: 1px solid #2e3f51;
+}
+#builder-tabs a.dsco i.dsco {
+    background-color: unset;
+    width: unset;
+    height: unset;
+}
+#builder-tabs a.dsco i.dsco img {
+    height: 18px;
+    padding: 0 0px 0 5px;
+}
+
+#builder-container {
+    padding-left: 20px;
+    border-left: 1px solid #ededed;
+}
+#builder-container .konvajs-content {
+    width: 950px;
+    height: 549px;
+    
+}
+h1 {
+    font-family: "Idlewild SSm A", "Idlewild SSm B";
+    font-style: normal;
+    font-weight: 500;
+    text-align: left;
+    font-size: 36px/53px;
+    letter-spacing: 0px;
+    color: #334E4A;
+    opacity: 1;
+}
+h5 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    color: #707070;
+}
+.builder-wrapper {
+    display: flex;
+        
+}
+.builder-wrapper .menu {
+    width: 445px;
+    margin-right: 20px;
+}
+#menu1 p,
+.menu-style p {
+    font-family: "Idlewild SSm A", "Idlewild SSm B";
+    font-size: 14px;
+    letter-spacing: 0px;
+    color: #334E4A;
+    line-height: 25px;
+    margin-top: 0;
+}
+.menu-style {
+    display: none;
+    min-width: 450px;
+}
+#menu2 ul,
+.builder-menu ul {
+    list-style: none;
+    padding-left: 0;
+}
+#menu2 ul li,
+.builder-menu ul li {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: space-between;
+    cursor: pointer;
+    border: 1px solid #fff;
+}
+#menu2 ul .img .selected-icon,
+#menu3 ul .img .selected-icon {
+    background: url(images/1x/icon-selected.png) no-repeat;
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-size: contain;
+    display: none;
+}
+#menu2 ul li:hover {
+    border-color: #fff;
+}
+#menu2 li .img_wrapper {
+    height: auto;
+    position: relative;
+    margin-left: 0;
+}
+#menu2 ul li:hover .img .selected-icon,
+#menu2 ul li .img .selected-icon.active,
+#menu3 ul li:hover .img .selected-icon,
+#menu3 ul li .img .selected-icon.active {
+    display: block;
+}
+#menu2 ul li div,
+.builder-menu  ul li div {
+    margin-left: 30px;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0px;
+    color: #707070;
+    font-size: 16px;
+    max-width: 200px;
+}
+#menu2 ul li div.content,
+.builder-menu  ul li div.content {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+#menu2 ul li div h5,
+.builder-menu ul li div h5 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1.6px;
+    color: #2E3F51;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+#menu3 ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 30px;
+}
+#menu3 h6,
+#menu4 h6 {
+    font-family: "Idlewild SSm A", "Idlewild SSm B";
+    font-size: 11px;
+    letter-spacing: 0px;
+    color: #E8722E;
+}
+#menu3 ul li {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: space-evenly;
+    cursor: pointer;
+    border: 1px solid #fff;
+}
+#menu3 ul li div:first-child {
+    text-align: center;
+    width: 160px;
+    position: relative;
+}
+#menu3 ul li div:last-child {
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0px;
+    color: #707070;
+    font-size: 16px;
+
+}
+#menu3 h5,
+#menu4 h5 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-family: "Idlewild SSm A", "Idlewild SSm B";
+    font-size:14px;
+    letter-spacing: 0px;
+    color: #334E4A;
+    font-weight: 500;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+#menu3 h6,
+#menu4 h6 {
+    margin-top: 0;
+}
+#menu3 p,
+#menu4 p {
+    font-size: 16px/24px;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1.6px;
+    color: #707070;
+    opacity: 1;
+}
+.btn {
+    display: block;
+    width: 130px;
+    background: #E8722E 0% 0% no-repeat padding-box;
+    opacity: 1;
+    text-align: center;
+    font-family: "Idlewild SSm A", "Idlewild SSm B";
+    font-size: 14px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    padding: 10px 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+.actions {
+    display: flex;
+    border-top: 1px solid #e6e6e6;
+    padding-top: 40px;
+}
+.actions .prev {
+}
+.actions .next {
+    margin-left: auto;
+}
+#menu4 .btn {
+    display: inline-block;
+    width: 200px;
+}
+#menu4 .centered {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#customMenu2 li .img_wrapper,
+#customMenu4 li .img_wrapper {
+    height: auto;
+    position: relative;
+}
+#customMenu2 li .img .selected-icon,
+#customMenu4 li .img .selected-icon {
+    background: url(images/1x/icon-selected.png) no-repeat;
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-size: contain;
+    display: none;
+}
+#customMenu2 li:hover {
+    border-color: #fff;
+}
+#customMenu2 li:hover .img .selected-icon,
+#customMenu2 li .img .selected-icon.active,
+#customMenu4 li:hover .img .selected-icon,
+#customMenu4 li .img .selected-icon.active {
+    display: block;
+}
+#customMenu2 li:nth-child(5){
+    border-top: 1px solid #e6e6e6;
+    padding-top: 40px;
+}
+#customMenu3 .inventory-options {
+    display: flex;
+    justify-content: space-between;
+}
+#customMenu3 .inventory-options li {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    position: relative;
+}
+#customMenu3 .inventory-options li label {
+    font-size: 12px;
+    padding-top: 5px;
+}
+#customMenu3 .inventory-options li img {
+    height: 50px;
+    width: 50px;
+}
+#customMenu3 .inventory-options li .selected-icon {
+    background: url(images/1x/icon-selected.png) no-repeat;
+    height: 23px;
+    width: 23px;
+    position: absolute;
+    bottom: 20px;
+    right: -10px;
+    background-size: contain;
+    display: none;
+}
+#customMenu3 .inventory-options li .inventory:hover .selected-icon,
+#customMenu3 .inventory-options li .selected-icon.active {
+    display: block;
+}
+#customMenu5 ul li {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: flex-start;
+    cursor: pointer;
+    border: 1px solid #fff;
+}
+#customMenu5 ul li .img {
+    text-align: center;
+    width: 175px;
+    margin-left: 0;
+}
+#customMenu5 li .img_wrapper {
+    height: auto;
+    position: relative;
+    margin-left: 0;
+}
+#customMenu5 .header {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+#customMenu5 .header img {
+    margin-right: 30px;
+}
+#customMenu5 .header h5 {
+    padding-right: 20px;
+}
+#customMenu5 p {
+    margin-bottom: 40px;
+}
+/* #customMenu5 ul li div:last-child {
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0px;
+    color: #707070;
+    font-size: 16px;
+
+} */
